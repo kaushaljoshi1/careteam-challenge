@@ -6,12 +6,12 @@ Given a n*n matrix of zeros and ones, return an array [a,b] where "a" is the num
 A group is defined by adjacent(horizontally and/or vertically, but not diagonally) numbers of the same value.
 
 
-#Components
+# Components
 Graph - A class to implement graph\
 CommectedComponent - A class to implement logic\
 UnitTes - A class which runs assertions against actual and expected output.
 
-#How to Run
+# How to Run
 Setup ruby environment\
 git clone this repository
 cd to cloned project
