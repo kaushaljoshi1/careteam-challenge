@@ -1,7 +1,7 @@
 class Graph
   attr_accessor :list
   def initialize
-    @list = {}
+    @list = {} #Adjacency List
   end
 
   def add_edge origin, destination

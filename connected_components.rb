@@ -8,7 +8,6 @@ class ConnectedComponents
     visited = Set.new
     graph.list.keys.each do|node|
       unless visited.include? node
-     #   p visited ,node
         count=count+1
         dfs graph, node, visited
       end
@@ -17,9 +16,7 @@ class ConnectedComponents
     count
   end
 
-
-
-
+  #implementing dfs for graph traversal
   def dfs graph, node,visited
     unless visited.include? node
       visited << node
@@ -32,7 +29,6 @@ class ConnectedComponents
   def create_graph_by_value matrix,value
 
     #We can take a single length as it is n*n matrix. But for sake of scalability computing different length for row and column
-
     graph = Graph.new
     (0..matrix.length-1).each do|row|
       (0..matrix[0].length-1).each do|col|
@@ -58,12 +54,23 @@ class ConnectedComponents
   end
 
   def get_key row, col
-   "a#{row}#{col}"
+    "a#{row}#{col}"
   end
 
 
 end
-matrix = [[1,0,1,1,],[0,1,0,0,],[1,0,1,1],[1,0,0,0,]]
+
+#Given cases
+matrix = [[1,0,1,1],[0,1,0,0],[1,0,1,1],[1,0,0,0]]
+one,zero = (ConnectedComponents.new.get_groups matrix, 1),( ConnectedComponents.new.get_groups matrix, 0)
+p [one,zero]
+
+matrix = [[0, 0, 1, 1], [0, 0, 1, 0], [1, 0, 0, 1], [1, 1, 1, 0]]
+one,zero = (ConnectedComponents.new.get_groups matrix, 1),( ConnectedComponents.new.get_groups matrix, 0)
+p [one,zero]
+
+
+matrix = [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 0, 0], [1, 1, 1, 1]]
 one,zero = (ConnectedComponents.new.get_groups matrix, 1),( ConnectedComponents.new.get_groups matrix, 0)
 p [one,zero]
 
