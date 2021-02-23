@@ -1,4 +1,4 @@
-# Careteam Challange - Grouping 1s and 0s
+# Careteam Challenge - Grouping 1s and 0s
 Assessment test by Careteam
 
 # Problem Statement
