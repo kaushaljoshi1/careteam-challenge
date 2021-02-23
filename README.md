@@ -8,7 +8,7 @@ A group is defined by adjacent(horizontally and/or vertically, but not diagonall
 
 # Components
 Graph - A class to implement graph\
-CommectedComponent - A class to implement logic\
+ConnectedComponent - A class to implement logic\
 UnitTes - A class which runs assertions against actual and expected output.
 
 # How to Run
